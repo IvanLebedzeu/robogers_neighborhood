@@ -14,11 +14,11 @@ _a web application that takes a number from a user and returns a range of number
 * Navigate to index.html file through your file interface.
 * Right click and open in the browser of your choice.
 
-* Alternatively, open the webpage at https://ivanlebedzeu.github.io/roman_numerals/
+* Alternatively, open the webpage at https://ivanlebedzeu.github.io/robogers_neighborhood/
 
 ## Known Bugs
 
-No known bugs at this time.
+Works only for single digits numbers 
 
 ## Support and contact details
 
