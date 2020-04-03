@@ -1,8 +1,30 @@
+var digitsArray = [];
+var numArray = [];
 function convertNumbers(number) {
   for (var i = 0; i <= number; i++){
-    console.log(i);
-  }
+
+    //var str = i.toString();
+    
+    //console.log(i);
+    digitsArray.push(i);
+    console.log(digitsArray);
+
+    for (var j = 0; j <= digitsArray.length; j++) {
+      //j = numArray.indexOf(digitsArray);
+      if(digitsArray.includes("3")){
+        digitsArray[j] = "Won't you be my neighbor?";
+      }
+    }
+      
+     
+  }  return digitsArray;
 }
+  
+
+  
+ 
+
+
 
 
 
@@ -13,19 +35,13 @@ $(document).ready(function(){
     
 
     var userInput = parseInt($("input#number").val());
-    //var userInputArray = userInput.split(" ");
-
-    // console.log(userInput);
-    // convertToRoman(userInput);
     console.log(userInput);
-    //convertToRoman(userInput);
-    //console.log(numRoman);
-    var digits = ("" + userInput).split("");
+    var number = ("" + userInput).split("");
 
-    convertNumbers(digits);
-    
+    convertNumbers(number);
 
-    $("#result").text(digits);
+
+    $("#result").text(digitsArray);
 
   });
 });
