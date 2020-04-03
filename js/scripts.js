@@ -14,18 +14,13 @@ function convertNumbers(number) {
 
    
       
-     var index = digitsArray.indexOf(3);
-     if (index!== -1){
-       digitsArray[index] = "Won't you be my neighbor?";
-     }
+     var index = digitsArray.indexOf(3);     
+     digitsArray[index] = "Won't you be my neighbor?";
      var index1 = digitsArray.indexOf(2);
-     if (index1!== -1){
-       digitsArray[index1] = "Boop";
-     }
+     digitsArray[index1] = "Boop";
      var index2 = digitsArray.indexOf(1);
-     if (index2!== -1){
-      digitsArray[index2] = "Beep";
-    }
+     digitsArray[index2] = "Beep";
+    
      
   }  return digitsArray;
 }
@@ -42,6 +37,9 @@ $(document).ready(function(){
 
   $("#user-input").submit(function(event){
     event.preventDefault();
+    $("#restartButton").click(function() {
+      location.reload();
+    });
     
 
     var userInput = parseInt($("input#number").val());
