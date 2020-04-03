@@ -1,21 +1,31 @@
 var digitsArray = [];
 var numArray = [];
+var letters = /[A-Za-z]/;
 function convertNumbers(number) {
+
+  if (number < 0 || (number.toString().match(letters))) {
+    alert("Please enter a valid number")
+  }
   for (var i = 0; i <= number; i++){
 
-    //var str = i.toString();
-    
-    //console.log(i);
+   
     digitsArray.push(i);
     console.log(digitsArray);
 
-    for (var j = 0; j <= digitsArray.length; j++) {
-      //j = numArray.indexOf(digitsArray);
-      if(digitsArray.includes("3")){
-        digitsArray[j] = "Won't you be my neighbor?";
-      }
-    }
+   
       
+     var index = digitsArray.indexOf(3);
+     if (index!== -1){
+       digitsArray[index] = "Won't you be my neighbor?";
+     }
+     var index1 = digitsArray.indexOf(2);
+     if (index1!== -1){
+       digitsArray[index1] = "Boop";
+     }
+     var index2 = digitsArray.indexOf(1);
+     if (index2!== -1){
+      digitsArray[index2] = "Beep";
+    }
      
   }  return digitsArray;
 }
